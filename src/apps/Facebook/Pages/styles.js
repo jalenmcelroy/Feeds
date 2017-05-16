@@ -4,7 +4,7 @@ export const styles = {
     alignSelf: 'center'
   },
   viewStyle: {
-    paddingTop: 10,
+    paddingTop: 20,
     alignSelf: 'stretch',
     flexDirection: 'column',
     flex: 1,

@@ -5,8 +5,8 @@ const PostInfo = (props) => {
   const { profilePic, name, time } = props;
 
   return (
-    <View>
-      <Image src={require(profilePic)} />
+    <View style={{ flexDirection: 'row' }}>
+      <Image source={profilePic} style={{ height: 50, width: 50 }} />
       <View>
         <Text>{name}</Text>
         <Text>{time}</Text>

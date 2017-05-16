@@ -1,0 +1,3 @@
+launchNavigator	/Users/jalenmcelroy/repos/Feeds/src/components/Header.js	/^  launchNavigator() {$/;"	function	line:6
+render	/Users/jalenmcelroy/repos/Feeds/src/components/Header.js	/^  render() {$/;"	function	line:10
+const.containerStyle	/Users/jalenmcelroy/repos/Feeds/src/components/Header.js	/^const styles = {$/;"	property	line:28

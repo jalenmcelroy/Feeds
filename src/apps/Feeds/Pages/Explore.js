@@ -2,20 +2,20 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { styles } from './styles';
 
-class Notifications extends React.Component {
+class Explore extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Notifications',
-    tabBarIcon: <Image source={require('../../icons/notifications.png')} style={styles.iconStyle} />
+    tabBarLabel: 'Explore',
+    tabBarIcon: <Image source={require('../../../icons/Search-50.png')} style={styles.iconStyle} />
   };
 
   render() {
     const { textStyle, viewStyle } = styles;
     return (
       <View style={viewStyle}>
-        <Text style={textStyle}>No New Notifications</Text>
+        <Text style={textStyle}>Come Explore</Text>
       </View>
     );
   }
 }
 
-export { Notifications };
+export { Explore };

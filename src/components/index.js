@@ -1,3 +1,4 @@
 export * from './Card';
 export * from './IconBar';
-export * from './IconSection';
+export { default as IconSection } from './IconSection';
+export { default as Header } from './Header';

@@ -1,32 +1,20 @@
-import { TabNavigator } from 'react-navigation';
-import {
-  Home,
-  Explore,
-  Trending,
-  Notifications,
-  Profile
-} from './apps/Feeds';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import ReduxThunk from 'redux-thunk';
+import AppsNavigator from './AppsNavigator';
+import reducers from './reducers';
 
-const order = ['Home', 'Explore', 'Trending', 'Notifications', 'Profile'];
+class App extends React.Component {
+  render() {
+    const store = createStore(reducers, applyMiddleware(ReduxThunk));
 
-const appRouteConfigs = {
-  Home: { screen: Home },
-  Explore: { screen: Explore },
-  Trending: { screen: Trending },
-  Notifications: { screen: Notifications },
-  Profile: { screen: Profile }
-};
-
-const appNavigationConfigs = {
-  tabBarPosition: 'bottom',
-  swipeEnabled: true,
-  animationEnabled: true,
-  tabBarOptions: {
-    initialRouteName: 'Home',
-    order
+    return (
+      <Provider store={store}>
+        <AppsNavigator />
+      </Provider>
+    );
   }
-};
-
-const App = TabNavigator(appRouteConfigs, appNavigationConfigs);
+}
 
 export default App;

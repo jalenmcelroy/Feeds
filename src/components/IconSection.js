@@ -1,33 +1,56 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { Text, Image, TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux';
+import { togglePicker } from '../actions';
 
-const IconSection = (props) => {
-  const { source, caption } = props;
-  const { containerStyle, textStyle, imageStyle } = styles;
+class IconSection extends React.Component {
+  onButtonPress() {
+    console.log(this.props.navigator);
+    this.props.togglePicker();
+    this.props.navigator.navigate(this.props.appName);
+  }
 
-  return (
-    <View style={containerStyle}>
-      <Image
-        source={require(source)}
-        style={imageStyle}
-      />
-      <Text style={textStyle}>{caption}</Text>
-    </View>
-  );
-};
+  render() {
+    const { source, appName } = this.props;
+    const { textStyle, iconStyle } = this.props.style;
 
-const styles = {
-  containerStyle: {
-    flex: 1,
-  },
+    return (
+      <TouchableOpacity style={containerStyle} onPress={this.onButtonPress.bind(this)}>
+        <Image
+          source={source}
+          style={iconStyle}
+        />
+        <Text style={textStyle}>{appName}</Text>
+      </TouchableOpacity>
+    );
+  }
+
+}
+
+/*const styles = {
   textStyle: {
-    fontSize: 5,
-    fontColor: '#cccccc'
+    fontSize: 10
   },
   imageStyle: {
-    height: 8,
-    width: 8
+    height: 20,
+    width: 20
+  },
+  containerStyle: {
+    flex: 1,
+    alignItems: 'center',
   }
+};*/
+
+const containerStyle = {
+  flex: 1,
+  alignItems: 'center',
+  justifyContent: 'center'
 };
 
-export { IconSection };
+const mapStateToProps = ({ apps }) => {
+  const { navigator } = apps;
+
+  return { navigator };
+};
+
+export default connect(mapStateToProps, { togglePicker })(IconSection);

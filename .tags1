@@ -1,0 +1,9 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+launchNavigator	/Users/jalenmcelroy/repos/Feeds/src/components/Header.js	/^  launchNavigator() {$/;"	function	line:6
+render	/Users/jalenmcelroy/repos/Feeds/src/components/Header.js	/^  render() {$/;"	function	line:10
+const.containerStyle	/Users/jalenmcelroy/repos/Feeds/src/components/Header.js	/^const styles = {$/;"	property	line:28
