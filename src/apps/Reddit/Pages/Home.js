@@ -3,6 +3,7 @@ import { View, Image, Text, StatusBar } from 'react-native';
 import { styles } from './styles';
 import { Header } from '../../../components';
 import AppPicker from '../../../AppPicker';
+import { Reddit } from '../../Apps.json';
 
 class Home extends React.Component {
   static navigationOptions = {
@@ -19,8 +20,8 @@ class Home extends React.Component {
           barStyle='light-content'
         />
         <Header
-          title='Reddit'
-          backgroundColor='#ff4500'
+          title={Reddit.name}
+          backgroundColor={Reddit.color}
         />
         <View style={viewStyle}>
           <Text style={textStyle}>Reddit Home</Text>

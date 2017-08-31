@@ -3,6 +3,7 @@ import { View, Image, Text, StatusBar } from 'react-native';
 import { styles } from './styles';
 import { Header } from '../../../components';
 import AppPicker from '../../../AppPicker';
+import { Feeds } from '../../Apps.json';
 
 class Home extends React.Component {
   static navigationOptions = {
@@ -19,8 +20,8 @@ class Home extends React.Component {
           barStyle='light-content'
         />
         <Header
-          title='Feeds'
-          backgroundColor='#008000'
+          title={Feeds.name}
+          backgroundColor={Feeds.color}
         />
         <View style={viewStyle}>
           <Text style={textStyle}>Feeds Home</Text>

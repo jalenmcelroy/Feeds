@@ -3,6 +3,7 @@ import { View, Image, Text, StatusBar } from 'react-native';
 import { styles } from './styles';
 import { Header } from '../../../components';
 import AppPicker from '../../../AppPicker';
+import { YouTube } from '../../Apps.json';
 
 class Home extends React.Component {
   static navigationOptions = {
@@ -19,8 +20,8 @@ class Home extends React.Component {
           barStyle='light-content'
         />
         <Header
-          title='YouTube'
-          backgroundColor='#cc181e'
+          title={YouTube.name}
+          backgroundColor={YouTube.color}
         />
         <View style={viewStyle}>
           <Text style={textStyle}>YouTube Home</Text>

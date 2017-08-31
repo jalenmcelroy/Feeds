@@ -4,6 +4,10 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-launchNavigator	/Users/jalenmcelroy/repos/Feeds/src/components/Header.js	/^  launchNavigator() {$/;"	function	line:6
-render	/Users/jalenmcelroy/repos/Feeds/src/components/Header.js	/^  render() {$/;"	function	line:10
-const.containerStyle	/Users/jalenmcelroy/repos/Feeds/src/components/Header.js	/^const styles = {$/;"	property	line:28
+componentDidMount	/Users/jalenmcelroy/repos/feeds/src/components/LoginForm.js	/^  componentDidMount() {$/;"	function	line:9
+componentWillUnmount	/Users/jalenmcelroy/repos/feeds/src/components/LoginForm.js	/^  componentWillUnmount() {$/;"	function	line:13
+_handleOpenURL	/Users/jalenmcelroy/repos/feeds/src/components/LoginForm.js	/^  _handleOpenURL(event) {$/;"	function	line:17
+appLogin	/Users/jalenmcelroy/repos/feeds/src/components/LoginForm.js	/^  appLogin() {$/;"	function	line:22
+randomString	/Users/jalenmcelroy/repos/feeds/src/components/LoginForm.js	/^    function randomString(length, chars) {$/;"	function	line:23
+render	/Users/jalenmcelroy/repos/feeds/src/components/LoginForm.js	/^  render() {$/;"	function	line:66
+const.containerStyle	/Users/jalenmcelroy/repos/feeds/src/components/LoginForm.js	/^const styles = {$/;"	property	line:111

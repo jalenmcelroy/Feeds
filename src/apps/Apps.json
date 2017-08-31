@@ -1,0 +1,32 @@
+{
+  "Facebook": {
+    "name": "Facebook",
+    "color": "#3b5998",
+    "icon": "/icons/Facebook.png"
+  },
+  "Twitter": {
+    "name": "Twitter",
+    "color": "#55acee",
+    "icon": "/icons/Facebook.png"
+  },
+  "Feeds": {
+    "name": "Feeds",
+    "color": "#008000",
+    "icon": "/icons/Facebook.png"
+  },
+  "Instagram": {
+    "name": "Instagram",
+    "color": "#966842",
+    "icon": "/icons/Facebook.png"
+  },
+  "YouTube": {
+    "name": "YouTube",
+    "color": "#cc181e",
+    "icon": "/icons/Facebook.png"
+  },
+  "Reddit": {
+    "name": "Reddit",
+    "color": "#ff4500",
+    "icon": "/icons/Facebook.png"
+  }
+}

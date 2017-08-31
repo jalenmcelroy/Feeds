@@ -7,6 +7,7 @@ import {
   YouTubeNavigator,
   InstagramNavigator
 } from './apps';
+import { LoginForm } from './components';
 
 
 const routeConfigs = {
@@ -15,7 +16,8 @@ const routeConfigs = {
   Reddit: { screen: RedditNavigator },
   Twitter: { screen: TwitterNavigator },
   YouTube: { screen: YouTubeNavigator },
-  Instagram: { screen: InstagramNavigator }
+  Instagram: { screen: InstagramNavigator },
+  Login: { screen: LoginForm }
 };
 
 const navigationConfigs = {

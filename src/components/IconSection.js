@@ -1,13 +1,16 @@
 import React from 'react';
-import { Text, Image, TouchableOpacity } from 'react-native';
+import { Text, Image, TouchableOpacity, View, AsyncStorage } from 'react-native';
 import { connect } from 'react-redux';
 import { togglePicker } from '../actions';
 
 class IconSection extends React.Component {
   onButtonPress() {
-    console.log(this.props.navigator);
     this.props.togglePicker();
-    this.props.navigator.navigate(this.props.appName);
+    if (AsyncStorage.getItem(this.props.appName) === true) {
+      this.props.navigator.navigate(this.props.appName);
+    } else {
+      this.props.navigator.navigate('Login', { appName: this.props.appName });
+    }
   }
 
   render() {
@@ -15,13 +18,15 @@ class IconSection extends React.Component {
     const { textStyle, iconStyle } = this.props.style;
 
     return (
-      <TouchableOpacity style={containerStyle} onPress={this.onButtonPress.bind(this)}>
-        <Image
-          source={source}
-          style={iconStyle}
-        />
+      <View style={containerStyle}>
+        <TouchableOpacity onPress={this.onButtonPress.bind(this)}>
+          <Image
+            source={source}
+            style={iconStyle}
+          />
+        </TouchableOpacity>
         <Text style={textStyle}>{appName}</Text>
-      </TouchableOpacity>
+      </View>
     );
   }
 

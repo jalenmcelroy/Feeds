@@ -4,7 +4,7 @@ import { styles } from './styles';
 
 class Profile extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Home',
+    tabBarLabel: 'Profile',
     tabBarIcon: <Image source={require('../../../icons/User-50.png')} style={styles.iconStyle} />
   };
 

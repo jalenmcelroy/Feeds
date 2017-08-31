@@ -1,6 +1,7 @@
 import {
   INITIALIZE_NAVIGATOR,
-  TOGGLE_APP_PICKER
+  TOGGLE_APP_PICKER,
+  LOGIN
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -14,6 +15,9 @@ export default (state = INITIAL_STATE, action) => {
       return { ...state, navigator: action.payload };
     case TOGGLE_APP_PICKER:
       return { ...state, visible: !(state.visible) };
+    case LOGIN:
+      console.log('Add login process');
+      return state;
     default:
       return state;
   }

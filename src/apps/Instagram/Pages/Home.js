@@ -3,6 +3,7 @@ import { View, Image, Text, StatusBar } from 'react-native';
 import { styles } from './styles';
 import { Header } from '../../../components';
 import AppPicker from '../../../AppPicker';
+import { Instagram } from '../../Apps.json';
 
 class Home extends React.Component {
   static navigationOptions = {
@@ -19,8 +20,8 @@ class Home extends React.Component {
           barStyle='light-content'
         />
         <Header
-          title='Instagram'
-          backgroundColor='#966842'
+          title={Instagram.name}
+          backgroundColor={Instagram.color}
         />
         <View style={viewStyle}>
           <Text style={textStyle}>Instagram Home</Text>

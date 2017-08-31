@@ -1,18 +1,18 @@
 import { TabNavigator } from 'react-navigation';
 import {
   Home,
-  Explore,
   Trending,
+  Messenger,
   Notifications,
   Profile
 } from './Pages';
 
-const order = ['Home', 'Explore', 'Trending', 'Notifications', 'Profile'];
+const order = ['Home', 'Trending', 'Messenger', 'Notifications', 'Profile'];
 
 const appRouteConfigs = {
   Home: { screen: Home },
-  Explore: { screen: Explore },
   Trending: { screen: Trending },
+  Messenger: { screen: Messenger },
   Notifications: { screen: Notifications },
   Profile: { screen: Profile }
 };
