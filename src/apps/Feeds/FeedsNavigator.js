@@ -1,7 +1,7 @@
 import React from 'react';
 import { TabNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
-import { initializeNavigator } from '../../actions/AppsActions';
+import { initializeNavigator } from '../../actions';
 import {
   Home,
   Explore,

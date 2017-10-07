@@ -1,12 +1,22 @@
 import React from 'react';
-import { Text, Image, TouchableOpacity, View, AsyncStorage } from 'react-native';
+import { Text, Image, TouchableOpacity, View } from 'react-native';
 import { connect } from 'react-redux';
+import Realm from 'realm';
 import { togglePicker } from '../actions';
+import { RedditSchema, RedditUserSchema } from '../schemas';
 
 class IconSection extends React.Component {
   onButtonPress() {
     this.props.togglePicker();
-    if (AsyncStorage.getItem(this.props.appName) === true) {
+    let app = null;
+    Realm.open({ schema: [RedditSchema, RedditUserSchema] })
+      .then(realm => {
+        app = realm.objects(this.props.appName);
+      })
+      .catch(ex => {
+        console.log(ex);
+      });
+    if (app !== null || this.props.appName === 'Feeds') {
       this.props.navigator.navigate(this.props.appName);
     } else {
       this.props.navigator.navigate('Login', { appName: this.props.appName });

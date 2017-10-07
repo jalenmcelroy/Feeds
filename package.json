@@ -13,6 +13,7 @@
     "react-native-blur": "^3.0.0-alpha",
     "react-navigation": "git+https://github.com/react-community/react-navigation.git",
     "react-redux": "5.0.4",
+    "realm": "^1.11.1",
     "redux": "3.6.0",
     "redux-thunk": "^2.2.0"
   },
